@@ -1,6 +1,5 @@
 import UIKit
 
-
 public final class FloatingActionButtonView: UIView{
     public enum FabDirection {
         case left

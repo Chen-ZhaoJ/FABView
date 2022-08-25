@@ -1,0 +1,16 @@
+PODS:
+  - FABView (0.1.0)
+
+DEPENDENCIES:
+  - FABView (from `../`)
+
+EXTERNAL SOURCES:
+  FABView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FABView: 00b0f3f1cdc07db503de613f90b15aba4baba5ba
+
+PODFILE CHECKSUM: 845547688d846d830a2842e79e867bbf22adec83
+
+COCOAPODS: 1.11.3
