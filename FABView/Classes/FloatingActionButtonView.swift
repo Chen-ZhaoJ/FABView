@@ -5,6 +5,7 @@ public final class FloatingActionButtonView: UIView{
         case left
         case right
     }
+    
     struct ViewModel{
         var fabDirection: FabDirection = .left
         var collapseImage: UIImage = UIImage()
