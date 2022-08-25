@@ -22,7 +22,7 @@ pod 'FABView'
 
 ## Author
 
-Chen-ZhaoJ, zhaojiechen@gamania.com
+Chen-ZhaoJ, abc205977@gmail.com
 
 ## License
 

@@ -7,12 +7,38 @@
 //
 
 import UIKit
-
+import FABView
 class ViewController: UIViewController {
 
+    let Floaty = FloatingActionButtonView(collapseImage: UIImage(), expandImage: UIImage())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = .systemGray2
+        testLable()
+        addFloatingActionButtonView()
+    }
+    
+    func addFloatingActionButtonView(){
+        Floaty.createFAB(image: UIImage())
+        Floaty.createFAB(image: UIImage(), title: "collapse FAB", target: #selector(collapseFAB(_:)), atVC: self)
+        Floaty.createFAB(image: UIImage(), title: "no collapse", target: #selector(noCollapse(_:)), atVC: self)
+        
+        //layoutFloaty
+        view.addSubview(Floaty)
+        Floaty.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([Floaty.widthAnchor.constraint(equalTo: view.widthAnchor, constant: 0),
+                                     Floaty.heightAnchor.constraint(equalTo: view.heightAnchor, constant: 0)])
+    }
+    
+    func testLable(){
+        let testlable:UILabel = UILabel()
+        testlable.text = "testtesttest"
+        testlable.textColor = .systemYellow
+        view.addSubview(testlable)
+        testlable.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([testlable.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                                     testlable.centerYAnchor.constraint(equalTo: view.centerYAnchor)])
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,3 +48,13 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController {
+    @IBAction func collapseFAB (_ sender: UIButton){
+        print("one Button Clicked")
+        Floaty.collapseFAB()
+    }
+    
+    @IBAction func noCollapse (_ sender: UIButton){
+        print("two Button Clicked")
+    }
+}
