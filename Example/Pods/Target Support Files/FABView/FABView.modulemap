@@ -1,0 +1,6 @@
+framework module FABView {
+  umbrella header "FABView-umbrella.h"
+
+  export *
+  module * { export * }
+}

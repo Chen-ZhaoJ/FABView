@@ -1,0 +1,22 @@
+{
+  "name": "FABView",
+  "version": "0.1.0",
+  "summary": "A short description of FABView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Chen-ZhaoJ/FABView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Chen-ZhaoJ": "zhaojiechen@gamania.com"
+  },
+  "source": {
+    "git": "https://github.com/Chen-ZhaoJ/FABView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "FABView/Classes/**/*"
+}
