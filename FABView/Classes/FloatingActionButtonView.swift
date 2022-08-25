@@ -5,7 +5,6 @@ public final class FloatingActionButtonView: UIView{
         case left
         case right
     }
-    
     struct ViewModel{
         var fabDirection: FabDirection = .left
         var collapseImage: UIImage = UIImage()
@@ -37,7 +36,7 @@ public final class FloatingActionButtonView: UIView{
         super.init(coder: coder)
     }
     
-    public convenience init(fabDirection: FabDirection = .left, collapseImage: UIImage, expandImage: UIImage, btnLeftOrRightSpace: CGFloat = 30, btnBottom: CGFloat = -40, buttonSize: CGFloat = 50, intervalOfButtons: CGFloat = 5, lblTextSize: Double = 20, lblTextColor: UIColor = UIColor.systemYellow, maskAlpha: CGFloat = 0.5, maskColor: UIColor = UIColor.black){
+    public convenience init(fabDirection: FabDirection = .left, collapseImage: UIImage, expandImage: UIImage, btnLeftOrRightSpace: CGFloat = 30, btnBottom: CGFloat = -40, buttonSize: CGFloat = 50, fabCollapseColor: UIColor = UIColor.yellow, fabExpandColor: UIColor = UIColor.black, intervalOfButtons: CGFloat = 5, lblTextSize: Double = 20, lblTextColor: UIColor = UIColor.systemYellow, maskAlpha: CGFloat = 0.5, maskColor: UIColor = UIColor.black){
         self.init()
         initialMask()
         vm.fabDirection = fabDirection
@@ -46,6 +45,8 @@ public final class FloatingActionButtonView: UIView{
         vm.btnLeftOrRightSpace = btnLeftOrRightSpace
         vm.btnBottom = btnBottom
         vm.buttonSize = buttonSize
+        vm.fabCollapseColor = fabCollapseColor
+        vm.fabExpandColor = fabExpandColor
         vm.intervalOfButtons = intervalOfButtons
         vm.lblTextSize = lblTextSize
         vm.lblTextColor = lblTextColor
