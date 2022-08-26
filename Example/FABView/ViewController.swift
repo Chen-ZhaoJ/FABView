@@ -10,7 +10,7 @@ import UIKit
 import FABView
 class ViewController: UIViewController {
 
-    let Floaty = FloatingActionButtonView(collapseImage: UIImage(), expandImage: UIImage())
+    let Floaty = FloatingActionButtonView(fabCollapseImage: UIImage(), fabExpandImage: UIImage(), fabCollapseColor: .yellow, fabExpandColor: .black)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,9 @@ class ViewController: UIViewController {
     }
     
     func addFloatingActionButtonView(){
-        Floaty.createFAB(image: UIImage())
-        Floaty.createFAB(image: UIImage(), title: "collapse FAB", target: #selector(collapseFAB(_:)), atVC: self)
-        Floaty.createFAB(image: UIImage(), title: "no collapse", target: #selector(noCollapse(_:)), atVC: self)
+        Floaty.createFAB(image: UIImage(), btnColor: .yellow)
+        Floaty.createFAB(image: UIImage(), title: "collapse FAB", btnColor: .yellow, lblColor: .yellow, target: #selector(collapseFAB(_:)), atVC: self)
+        Floaty.createFAB(image: UIImage(), title: "no collapse", btnColor: .yellow, lblColor: .yellow, target: #selector(noCollapse(_:)), atVC: self)
         
         //layoutFloaty
         view.addSubview(Floaty)
