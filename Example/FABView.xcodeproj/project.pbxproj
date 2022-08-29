@@ -490,6 +490,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 43C47494H2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FABView\"",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = FABView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -507,6 +511,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 43C47494H2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FABView\"",
+				);
 				INFOPLIST_FILE = FABView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -524,7 +532,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 43C47494H2;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
 					"$(inherited)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -547,7 +555,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 43C47494H2;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/PrivateFrameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
